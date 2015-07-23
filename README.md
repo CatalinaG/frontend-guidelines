@@ -47,45 +47,6 @@ element in a wrong way than staying neutral.
 </h1>
 ```
 
-### Brevity
-
-Keep your code terse. Forget about your old XHTML habits.
-
-```html
-<!-- bad -->
-<!doctype html>
-<html lang=en>
-  <head>
-    <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
-    <title>Contact</title>
-    <link rel=stylesheet href=style.css type=text/css />
-  </head>
-  <body>
-    <h1>Contact me</h1>
-    <label>
-      Email address:
-      <input type=email placeholder=you@email.com required=required />
-    </label>
-    <script src=main.js type=text/javascript></script>
-  </body>
-</html>
-
-<!-- good -->
-<!doctype html>
-<html lang=en>
-  <meta charset=utf-8>
-  <title>Contact</title>
-  <link rel=stylesheet href=style.css>
-
-  <h1>Contact me</h1>
-  <label>
-    Email address:
-    <input type=email placeholder=you@email.com required>
-  </label>
-  <script src=main.js></script>
-</html>
-```
-
 ### Accessibility
 
 Accessibility shouldn't be an afterthought. You don't have to be a WCAG expert to improve your
@@ -165,26 +126,6 @@ div {
 }
 ```
 
-### Box model
-
-The box model should ideally be the same for the entire document. A global
-`* { box-sizing: border-box; }` is fine, but don't change the default box model
-on specific elements if you can avoid it.
-
-```css
-/* bad */
-div {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-/* good */
-div {
-  padding: 10px;
-}
-```
-
 ### Flow
 
 Don't change the default behavior of an element if you can avoid it. Keep elements in the
@@ -218,20 +159,6 @@ div {
   width: 100px;
   margin-left: auto;
 }
-```
-
-### Positioning
-
-There are many ways to position elements in CSS but try to restrict yourself to the
-properties/values below. By order of preference:
-
-```
-display: block;
-display: flex;
-position: relative;
-position: sticky;
-position: absolute;
-position: fixed;
 ```
 
 ### Selectors
@@ -474,19 +401,12 @@ div::before {
 
 Don't use them.
 
-```css
-/* bad */
-div {
-  // position: relative;
-  transform: translateZ(0);
-}
+### WorkFlow
+#### Reset
+#### Readability
+#### Organization
+#### Comments
 
-/* good */
-div {
-  /* position: relative; */
-  will-change: transform;
-}
-```
 
 ## JavaScript
 
