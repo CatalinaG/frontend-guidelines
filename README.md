@@ -403,10 +403,70 @@ Don't use them.
 
 ### WorkFlow
 #### Reset
-#### Readability
-#### Organization
-#### Comments
 
+CSS resets help establish a baseline from which all the styles are set. A reset effectively overrides the browsers’ default styles for certain elements (which can vary greatly). Despite the popularity of CSS resets over the past several years, many sites still don’t employ them, and these sites’ CSS scalability is suffering greatly for it.
+
+One of the great examples for a reset CSS stylesheet is normalize.css (http://necolas.github.io/normalize.css/), a modern HTML5 CSS reset. All you have to do is include it before your own style definitions in your HTML file under the Head section. Otherwise, these styles will override your own style definitions.
+
+#### Readability
+
+Make your code readable, minimize later if you have to.
+
+#### Organization
+
+As an example consider the code structure below.
+	
+```
+/****** General Styles *********/
+ 
+body {...}
+h1, h2, h3 {..}
+p {...}
+a {...}
+ 
+/****** Header Style *********/
+#header {...}
+ 
+/****** Navigation Style *********/
+#nav {...}
+ 
+/****** Footer Style *********/
+#footer {...}
+```
+
+#### Styleshhet information & Annotations/Comments to Identify a Set of CSS
+
+Put a Title, Author, Tags, Description, URL  information and so on on your stylesheet. This will give the user/developer a reference person to contact whenever they need support regarding your creation.
+
+```	
+/*
+Theme Name: Simple Parallax Website
+Description: Simple Parallax Scrolling Effect
+Author: Samuel Norton
+Author URI: http://www.1stwebdesigner.com/
+Tags: Parallax, Website
+*/
+```
+
+```
+/****** General Styles *********/
+ 
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ 
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    font-weight:normal;
+    font-size: 55px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+```
 
 ## JavaScript
 
